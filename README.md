@@ -19,12 +19,3 @@ Switch the lamp on/off, adjust brightness (10–100%), select warm/neutral/cool 
 ## Verification
 
 The original version passed 20 JavaScript checks with a minimal simulated DOM. The revised brightness-to-power transition was separately checked after the change. Browser rendering and keyboard behavior still need manual verification. See the accompanying Google Doc draft for a test checklist.
-
-## Publish to GitHub
-
-1. Create a new repository in your GitHub account, for example `little-light-doodle`.
-2. Use **Add file → Upload files** to upload `index.html`, `style.css`, `script.js`, and this README at the repository root.
-3. Commit the uploaded files and copy the actual repository URL into your Google Doc.
-4. Optional: enable GitHub Pages for the repository if your instructor wants an online demonstration.
-
-AI assistance: Codex generated the initial model and technical write-up. Complete your own testing and personal reflection before submission.
