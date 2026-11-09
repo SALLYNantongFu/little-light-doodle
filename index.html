@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Little Light — An Interactive Desk Lamp</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main>
+    <header><span class="eyebrow">DOODLE / DATA, STATE & CONTROL FLOW</span><h1>Little Light<span>.</span></h1><p>A familiar object. A few variables. A little interaction.</p></header>
+    <div class="layout">
+      <section class="scene" aria-label="Desk lamp simulation">
+        <div class="scene-label"><span id="indicator"></span><span id="scene-status">POWER OFF</span></div>
+        <div class="lamp" id="lamp" role="img" aria-label="Desk lamp, switched off">
+          <div class="beam"></div><div class="shade"></div><div class="bulb"></div><div class="stem"></div><div class="base"></div>
+        </div>
+        <div class="desk"></div><span class="scene-caption">YOUR SMALL CORNER OF LIGHT</span>
+      </section>
+      <section class="controls" aria-labelledby="controls-title">
+        <span class="eyebrow">01 / INTERACT</span><h2 id="controls-title">Make yourself comfortable.</h2>
+        <button id="power" type="button" aria-pressed="false">Turn on</button>
+        <div class="label-row"><label for="brightness">Brightness setting</label><output id="brightness-value" for="brightness">60%</output></div>
+        <input id="brightness" type="range" min="10" max="100" step="10" value="60">
+        <div class="scale"><span>Soft / 10%</span><span>Bright / 100%</span></div>
+        <label for="tone">Light temperature</label>
+        <select id="tone"><option value="warm">Warm · unwind</option><option value="neutral">Neutral · everyday</option><option value="cool">Cool · focus</option></select>
+        <p id="status" role="status" aria-live="polite"></p>
+        <button id="reset" class="secondary" type="button">Reset settings</button>
+      </section>
+    </div>
+    <section class="under-hood" aria-labelledby="state-title"><div><span class="eyebrow">02 / UNDER THE HOOD</span><h2 id="state-title">Watch the state change.</h2><p>Adjusting brightness turns the lamp on automatically. Changing temperature alone keeps the current power state.</p></div><dl><div><dt>isOn</dt><dd id="state-power">false</dd></div><div><dt>brightness</dt><dd id="state-brightness">60</dd></div><div><dt>temperature</dt><dd id="state-tone">"warm"</dd></div><div><dt>actualOutput</dt><dd id="state-output">0%</dd></div></dl></section>
+    <footer>Try this: switch off → move the brightness slider → watch the lamp turn on.</footer>
+  </main>
+</body>
+</html>
